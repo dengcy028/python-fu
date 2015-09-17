@@ -43,8 +43,8 @@ def makebutton (image, string, font, size, antialias, colorfn, colorfg, colorbg,
 
 	gimp.set_foreground(colorfn)
 	textlayer = pdb.gimp_text_fontname(image, None, radius*2, radius*2, string, -1, antialias, size, PIXELS, font)
-	width = (textlayer.width+radius*4)*1.5
-	height = (textlayer.height+radius*4)*1.7
+	width = int((textlayer.width+radius*4)*1.5)
+	height = int((textlayer.height+radius*4)*1.7)
 
 	x = width*0.07
 	y = height*0.2
